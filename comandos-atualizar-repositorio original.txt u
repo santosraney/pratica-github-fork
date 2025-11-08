@@ -1,0 +1,7 @@
+1) git remote add upstream https://github.com/prof-freedson/pratica-github-fork.git
+
+2) git fetch upstream
+
+3) git checkout main
+
+4) git merge upstream/main

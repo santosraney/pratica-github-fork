@@ -1,0 +1,44 @@
+O que é um fork no Git/Github
+
+- Fork é uma operação de cópia de um repositório para uma conta de outro usuário;
+
+- A cópia feita ferá parte da conta do usuário que fez a solitação;
+
+- As alterações feitas na cópia não afetarão o repositório original;
+
+- Para enviar mudanças feitas na cópia para o repositório original, será necessário solicitar a chamada 'pull request'
+
+O que é uma pull request
+
+- É uma solicitação de envio de mudanças que podem contribuir para o repositório original;
+
+- A mudança solicitada será recebida pelo usuário proprietário do repositório original;
+
+- O proprietário poderá ou não aceitar as mudanças.
+
+Como atualizar as mudanças do repositório original para a cópia do repositório (fork)?
+
+Quando o repositório original recebe contribuições de outros programadores, o usuários que fizeram o fork precisam atualizar as mudanças que foram feitas no repositório original.
+
+Para isso, é necessário executar alguns comandos:
+
+1) Comando que faz o endereçamento do repositório original
+
+git remote add upstream https://github.com/prof-freedson/pratica-github-fork.git
+
+OBSERVAÇÃO: o endereço do repositório original pode mudar de acordo com o fork realizado
+
+2) Comando para baixar as referências do repositório original (branches, commits, etc.).
+Esse comando ainda não irá unir/mesclar os arquivos do seu fork com o original
+
+git fetch upstream
+
+3) Comando que irá trocar a branch local em
+relação a branch do repositório original
+
+git checkout main
+
+4) Comando que irá unir/mesclar as alterações
+do repositório local em relação ao original
+
+git merge upstream/main
